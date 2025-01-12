@@ -114,6 +114,12 @@ func WithUserToken(token string) ClientOption {
 	}
 }
 
+func WithUserTokenWithCollection(token, collection string) ClientOption {
+	return func(c *Client) {
+		c.authorizer = newAuthorizeToken(c.client, c.url+"/api/collections/"+collection+"/auth-refresh", token)
+	}
+}
+
 func (c *Client) Authorize() error {
 	return c.authorizer.authorize()
 }

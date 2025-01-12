@@ -23,6 +23,7 @@ func main() {
 	// pocketbase.WithAdminEmailPassword("admin@admin.com", "admin@admin.com")
 	// pocketbase.WithUserEmailPassword("user@user.com", "user@user.com")
 	// pocketbase.WithUserToken(token)
+	// pocketbase.WithUserTokenWithCollection(token, collectionName)
 	// pocketbase.WithAdminToken(token)
 	// pocketbase.WithDebug()
 

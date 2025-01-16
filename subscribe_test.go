@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pluja/pocketbase/migrations"
+	"github.com/mrchypark/pocketbase/migrations"
 	"github.com/stretchr/testify/assert"
 )
 

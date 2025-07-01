@@ -329,6 +329,9 @@ func (c *Client) List(collection string, params ParamsList) (ResponseList[map[st
 	if params.Fields != "" {
 		request.SetQueryParam("fields", params.Fields)
 	}
+	if params.SkipTotal {
+		request.SetQueryParam("skipTotal", "1")
+	}
 
 	resp, err := request.Get(c.url + "/api/collections/{collection}/records")
 	if err != nil {
